@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox - Sizing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Basic</a></li>
+        <li><a href="wrap.html">Wrap</a></li>
+        <li><a href="order.html">Ordering</a></li>
+        <li><a href="justifycontent.html">Justify-Content</a></li>
+        <li><a href="alignitem.html">Align-Items</a></li>
+        <li><a href="aligncontent.html">Align-Content</a></li>
+        <li><a href="alignself.html">Align-Self</a></li>
+        <li><a href="sizing.html">Sizing</a></li>
+        <li><a href="gap.html">Gap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <p>display : flex<br/>
+     flex : 1<br/>
+    <pre>
+  <u>flex : 1 is the same as</u>
+    flex-grow : 1
+    flex-shrink : 1
+    flex-basis : auto
+    =[flex : 1 1 auto]
+    </pre>
+    <div class="container">
+      <div class="boxF box1">one</div>
+      <div class="boxF box2">two</div>
+      <div class="boxF box3">three</div>
+      <div class="boxF box4">four</div>
+      <div class="boxF box5">five</div>
+      <div class="boxF box6">six</div>
+      <div class="boxF box7">seven</div>
+    </div>
+  </p>
+  <p><br/>display : flex<br/>
+    flex : 1<br/>
+    <blockquote>
+      <i>but if you specify the flex of the items...</i><br/>
+      .box2 {flex : 2}<br/>
+      .box5 {flex : 3}
+    </blockquote>
+    <div class="container">
+      <div class="boxFB box1">one</div>
+      <div class="boxFB box2">two</div>
+      <div class="boxFB box3">three</div>
+      <div class="boxFB box4">four</div>
+      <div class="boxFB box5">five</div>
+      <div class="boxFB box6">six</div>
+      <div class="boxFB box7">seven</div>
+    </div>
+  </p>
+  <p><br/>display : flex<br/>
+    flex-wrap : wrap<br/>
+    height : 450px<br/>
+    align-content : flex-start <mark> [will use up the whole height if not specified]</mark><br/>
+    flex-basis : 500px<br/>
+    flex-grow : 1 <mark> [leaves open space on right if not specified]</mark><br/>
+    <blockquote>
+      <strong>additional specified flex grow will only apply to the row with item</strong><br/>
+      .box3 {flex-grow : 10}
+    </blockquote>
+    <!-- containerAC: flex, wrap, height -->
+    <!-- ac-start : aligncontent flexstart -->
+    <div class="containerAC ac-start">
+      <div class="boxFW box1">one</div>
+      <div class="boxFW box2">two</div>
+      <div class="boxFW box3">three</div>
+      <div class="boxFW box4">four</div>
+      <div class="boxFW box5">five</div>
+      <div class="boxFW box6">six</div>
+    </div>
+  </p>
+  <p><br/>display : flex<br/>
+    flex-wrap : wrap<br/>
+    <strong>flex-direction : column</strong><br/>
+    height : 100vh <mark>[need hard height so that items can wrap (not <i>min-height)</i>]</mark><br/>
+    flex-basis : 250px<br/>
+    flex-grow : 1<br/>
+    <blockquote>
+      .box2 {flex-grow : 5} <br/>
+      .box4 {flex-basis : 100px}
+    </blockquote>
+    <div class="containerB">
+      <div class="boxFC box1">one</div>
+      <div class="boxFC box2">two</div>
+      <div class="boxFC box3">three</div>
+      <div class="boxFC box4">four</div>
+      <div class="boxFC box5">five</div>
+      <div class="boxFC box6">six</div>
+      <div class="boxFC box7">seven</div>
+      <div class="boxFC box1">one</div>
+      <div class="boxFC box2">two</div>
+      <div class="boxFC box3">three</div>
+      <div class="boxFC box4">four</div>
+      <div class="boxFC box5">five</div>
+      <div class="boxFC box6">six</div>
+      <div class="boxFC box7">seven</div>
+    </div>
+  </p>
+
+</body>
+</html>

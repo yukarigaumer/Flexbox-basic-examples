@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox - Align Self</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Basic</a></li>
+        <li><a href="wrap.html">Wrap</a></li>
+        <li><a href="order.html">Ordering</a></li>
+        <li><a href="justifycontent.html">Justify-Content</a></li>
+        <li><a href="alignitem.html">Align-Items</a></li>
+        <li><a href="aligncontent.html">Align-Content</a></li>
+        <li><a href="alignself.html">Align-Self</a></li>
+        <li><a href="sizing.html">Sizing</a></li>
+        <li><a href="gap.html">Gap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <p>display : flex<br/>
+    <strong>align items : flex-start</strong> [default would be stretch]<br/>
+    height : 100vh<br/>
+    flex : 1<br/>
+    align-self : <mark>overrides any specification of align-items</mark><i>( baseline [default] )</i>
+    <blockquote>
+      .box3 = align-self : center<br/>
+      .box7 = align-self : stretch<br/>
+      .box8 = align-self : flex-end<br/>
+    </blockquote>
+    <div class="container as-start">
+      <div class="boxS box1">1</div>
+      <div class="boxS box2">2</div>
+      <div class="boxS box3">3</div>
+      <div class="boxS box4">4</div>
+      <div class="boxS box5">5</div>
+      <div class="boxS box6">6</div>
+      <div class="boxS box7">7</div>
+      <div class="boxS box8">8</div>
+      <div class="boxS box9">9</div>
+      <div class="boxS box10">10</div>
+    </div>
+  </p>
+
+</body>
+</html>

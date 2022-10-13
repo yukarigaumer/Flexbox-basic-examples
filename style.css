@@ -1,0 +1,256 @@
+*{
+  box-sizing: border-box;
+}
+
+/* flex container */
+nav ul{
+  display: flex;
+  list-style: none;
+  margin: 20px auto 10px;
+  border: 1px solid rgb(1, 95, 95);
+  padding: 0;
+  width: fit-content;
+  gap: 1px 1px;
+}
+
+@media all and (max-width:700px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* can also remain in flexbox by:
+nav ul{
+  flex-wrap:wrap;}
+nav li{
+  flex:1 1 50%;} */
+
+/* flex items */
+nav li{
+  background-color: rgb(0, 139, 139);
+  text-align: center;
+  padding: 8px;
+  /* flex: 1; */
+}
+
+a{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+}
+a:hover{
+  background-color: darkolivegreen;
+}
+
+/* colors for each box */
+.box1 {background-color: aquamarine;}
+.box2 {background-color: rgb(49, 84, 255);}
+.box3 {background-color: rgb(149, 82, 216);}
+.box4 {background-color: rgb(127, 207, 239);}
+.box5 {background-color: rgb(223, 255, 106);}
+.box6 {background-color: rgb(255, 196, 34);}
+.box7 {background-color: rgb(252, 79, 79);}
+.box8 {background-color: rgb(237, 237, 186);}
+.box9 {background-color: rgb(88, 227, 88);}
+.box10 {background-color: rgb(247, 101, 233);}
+
+/* FOR INDEX PAGE */
+/* default styles to make each box visible */
+.box, .boxW, .boxR, .boxB, .boxC, .boxS, .boxF, .boxFB, .boxFW, .boxFC, .boxG{
+  color: white;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  padding: 10px;
+}  
+
+.container{
+  display: flex;
+  border: 10px solid black;
+}
+
+.container-inline-flex{
+  display: inline-flex;
+  border: 10px solid black;
+  flex-direction: row-reverse;
+}
+
+/* FOR WRAP PAGE */
+/* default styles with specific width */
+.boxW{
+  width: calc(33.3333% - 20px);
+  margin: 10px;
+}
+
+.wrap{
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.wrapC{
+  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* FOR ORDER PAGE */
+.boxR{
+  flex: 1;
+}
+
+.boxR.box3{order: 1;}
+.boxR.box7{order: 2;}
+.boxR.box8{order: -1;}
+
+/* FOR JUSTIFY CONTENT PAGE */
+.jc-flex-end{justify-content: flex-end;}
+.jc-center{justify-content: center;}
+.jc-space-btwn{justify-content: space-between;}
+.jc-space-around{justify-content: space-around;}
+.jc-space-evenly{justify-content: space-evenly;}
+
+.jc-column{
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* only for last "direction:column" differnt font size*/
+.boxJ{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  padding: 10px;
+}  
+
+/* FOR ALIGN ITEMS PAGE */
+.ai-center{
+  align-items: center;
+  height: 200px;
+}
+.ai-start{
+  align-items: flex-start;
+  height: 200px;
+}
+.ai-end{
+  align-items: flex-end;
+  height: 200px;
+}
+.ai-baseline{
+  align-items: baseline;
+  height: 200px;
+}
+
+/* only for "baseline" */
+.boxB.box1{font-size: 30px;}
+.boxB.box2{font-size: 50px;}
+.boxB.box4{font-size: 120px;}
+.boxB.box6{font-size: 50px;}
+.boxB.box7{font-size: 130px;}
+.boxB.box8{font-size: 30px;}
+.boxB.box10{font-size: 100px;}
+
+/* FOR ALIGN CONTENT PAGE */
+.boxC{
+  width:25%;
+}
+
+.containerAC{
+  display: flex;
+  border: 10px solid black;
+  flex-wrap: wrap;
+  height: 450px;
+}
+
+.ac-start{align-content: flex-start;}
+.ac-end{align-content: flex-end;}
+.ac-center{
+  align-content: center;
+  justify-content: center;
+}
+.ac-btwn{align-content: space-between;}
+.ac-arnd{align-content: space-around;}
+
+/* FOR ALIGN SELF PAGE */
+.as-start{
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.boxS{flex: 1;}
+
+.boxS.box1{}
+.boxS.box2{padding-bottom: 150px;}
+.boxS.box3{align-self: center;}
+.boxS.box4{}
+.boxS.box5{}
+.boxS.box6{padding-bottom: 0px;}
+.boxS.box7{align-self: stretch;}
+.boxS.box8{align-self: flex-end;}
+.boxS.box9{padding-bottom: 50px;}
+.boxS.box10{}
+
+/* FOR SIZING PAGE */
+.boxF, .boxFB{
+  font-size: 30px;
+  flex: 1;
+}
+
+.boxFB.box2{flex: 2;}
+.boxFB.box5{flex: 3;}
+
+.boxFW{
+  font-size: 50px;
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+
+.boxFW.box3{flex-grow: 10;}
+
+/* only for direction:column */
+.containerB{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 10px solid black;
+  height: 100vh;
+}
+
+.boxFC{
+  font-size: 40px;
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.boxFC.box2{flex-grow: 5;}
+.boxFC.box4{flex-basis: 150px;}
+
+/* FOR GAP PAGE */
+.containerG{
+  display: flex;
+  border: 10px solid black;
+  flex-wrap: wrap;
+  height: 600px;
+  gap: 20px 5px;
+}
+
+.boxG{
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.containerGR{
+  display: flex;
+  border: 10px solid black;
+  flex-wrap: wrap;
+  height: 500px;
+  row-gap: 30px;
+}
+.containerGC{
+  display: flex;
+  border: 10px solid black;
+  flex-wrap: wrap;
+  height: 500px;
+  column-gap: 30px;
+}

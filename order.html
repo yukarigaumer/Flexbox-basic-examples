@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox - Ordering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Basic</a></li>
+        <li><a href="wrap.html">Wrap</a></li>
+        <li><a href="order.html">Ordering</a></li>
+        <li><a href="justifycontent.html">Justify-Content</a></li>
+        <li><a href="alignitem.html">Align-Items</a></li>
+        <li><a href="aligncontent.html">Align-Content</a></li>
+        <li><a href="alignself.html">Align-Self</a></li>
+        <li><a href="sizing.html">Sizing</a></li>
+        <li><a href="gap.html">Gap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <p>display : flex<br/>
+     flex : 1<br/>
+     order : # (ex: [0 default] 1, 2,... [move to very right] -1, -2,... [move to very left])
+     <pre>  <u>order example below:</u>
+      .box3 {order: 1;}
+      .box7 {order: 2;}
+      .box8 {order: -1;}</pre>
+    <br/>
+     <div class="container">
+      <div class="boxR box1">1</div>
+      <div class="boxR box2">2</div>
+      <div class="boxR box3">3</div>
+      <div class="boxR box4">4</div>
+      <div class="boxR box5">5</div>
+      <div class="boxR box6">6</div>
+      <div class="boxR box7">7</div>
+      <div class="boxR box8">8</div>
+      <div class="boxR box9">9</div>
+      <div class="boxR box10">10</div>
+    </div>
+  </p>
+
+</body>
+</html>
